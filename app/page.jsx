@@ -5,5 +5,8 @@ export default async function Home() {
   const { rows } = await db.execute(
     `SELECT 1;`,
   );
+  await db.execute(
+    `SELECT 1;`,
+  );
   return <pre>{JSON.stringify(rows, null, 2)}</pre>;
 }

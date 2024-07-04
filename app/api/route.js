@@ -5,6 +5,9 @@ export async function GET() {
   const { rows } = await db.execute(
     `SELECT 1;`,
   );
+  await db.execute(
+    `SELECT 1;`,
+  );
   return Response.json(rows, {
     headers: {
       "Access-Control-Allow-Origin": "*",
